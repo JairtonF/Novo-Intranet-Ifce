@@ -1,0 +1,451 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 30rem auto auto 5rem;
+    grid-template-areas:"header"
+                        "links-rapidos"
+                        "noticias"
+                        "footer";
+}
+
+header{
+    grid-area: header;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+/*Menu de navegação superior*/
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2px 20px;
+    height: 6rem;
+    background-image: linear-gradient(to top, rgba(0,0,0,0), rgb(0, 0, 0, 1));
+}
+
+nav ul{
+    margin: 0;
+}
+
+.menu-superior li{
+    display: flex;
+    list-style: none;
+    display: inline-block;
+}
+/*nav ul li{
+    display: flex;
+    list-style: none;
+    display: inline-block;
+}
+*/
+.menu-superior a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 10px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: all ease .5s;
+}
+.menu-superior a:hover{
+    background-color: #00000070;
+}
+
+.dropdown{
+    float: left;
+    overflow: hidden;
+    background-color: #0f0f0fc2;
+    display: none;
+    margin: -12px;
+}
+
+.dropdown ul{
+    margin: 0;
+    margin-top: -10px;
+    padding: 0;
+}
+.dropdown li{
+    text-align: center;
+}
+
+.dropdown-btn:hover > .dropdown{
+    display: flex;
+}
+
+
+/*Fim do meunu de navegação superior*/
+
+/*Barra de pesquisa animada*/
+.search-box{
+    background: #00000000;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+
+}
+
+.search-box:hover{
+    background:#0f0f0fc2;
+}
+
+.search-box:hover > .search-txt{
+    width: 160px;
+    padding: 0 6px;
+}
+
+.search-box:hover > .search-button{
+    background: #000000;
+}
+
+.search-button{
+    color: #ffffff;
+    border-radius: 50%;
+    background: #00000000;
+}
+.search-txt{
+    border: none;
+    background:none;
+    outline: none;
+    float: left;
+    color: white;
+    font-size: 15px;
+    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+    transition: 0.4s;
+    width: 0px;
+}
+/*Fim da Barra de pesquisa*/
+
+nav img{
+    padding: 5px;
+    width: auto;
+    height: 65%;
+}
+
+/*Fim do menu de navegação superior*/
+
+/*Menu de navegação inferior*/
+.menu-inferior{
+    display: block;
+    position: relative;
+    top: 16rem;
+
+    text-align: center;
+    padding: 25px;
+    height: 8rem;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgb(0, 0, 0, 1));
+}
+
+.menu-inferior ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.menu-inferior ul li {
+    list-style: none;
+    display: inline-block;
+    transition: all ease .5s;
+}
+
+.menu-inferior ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 10px;
+    letter-spacing: 2px;
+    font-weight: 600;   
+}
+
+.menu-inferior ul li:hover{
+    background-color: #0000005e;
+}
+
+.icon-float{
+    float: left;
+    padding: auto;
+    color: rgb(224, 202, 202);
+}
+
+.vertical-line-menu-inferior{
+    display: inline-block;
+    border-left: 1px solid #ccc;
+    margin: 0 10px;
+    height: 60px;
+}
+
+/*Fim do menu de navegação inferior*/
+
+
+/*links rápidos*/
+
+.links-rapidos{
+    grid-area: links-rapidos;
+    background: white;
+}
+
+/*.links-rapidos ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.links-rapidos ul li{
+    padding: 10px;
+}*/
+
+[data-tab-content]{
+    display: none;
+}
+
+.active[data-tab-content]{
+    display: block;
+}
+/*Links do .cbp-ig-grid*/
+/*cbp ig grid início -------------------------------------------------------------------------------*/
+.cbp-ig-grid {
+    list-style: none;
+    padding: 8px 0 20px 0;
+    margin: 0;
+    margin-top: -18px;
+}
+.cbp-ig-grid:before, .cbp-ig-grid:after{
+    content: "";
+    display: table;
+}
+  
+.cbp-ig-grid:after{
+    clear: both;
+}
+
+/*Item na Grid*/
+  
+.cbp-ig-grid li{
+    width: 14%;
+    float: left;
+    height: 160px;
+    text-align: center;
+}
+  
+.cbp-ig-grid img{
+    width: 60px;
+    height: 50px;
+}
+ 
+.cbp-ig-grid li > a{
+    display: block;
+    height: 100%;
+    color: #006a20;
+    -webkit-transition: background .2s;
+    -moz-transition: background .2s;
+    transition: background 0.2s;
+}
+  
+.cbp-ig-icon{
+    padding: 30px 0 0 0;
+    display: block;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -moz-transform 0.2s;
+    transition: transform 0.2s;
+}
+  
+.cbp-ig-icon:before{
+    font-family: 'anyoldicon';
+    font-size: 14em;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+  
+.cbp-ig-grid .cbp-ig-title {
+    margin: 25px 0 10px 0;
+    padding: 2px 0 0 0;
+    font-size: 0.9em;
+    position: relative;
+    -webkit-transition: -webkit-transform 0.2s;
+    -moz-transition: -moz-transform 0.2s;
+    transition: transform 0.2s;
+}
+
+/*Linha verde que se move*/
+.cbp-ig-grid .cbp-ig-title:before {
+  content: '';
+  position: absolute;
+  background: #006a20;
+  width: 150px;
+  height: 3px;
+  top: 0px;
+  left: 50%;
+  margin: -10px 0 0 -75px;
+  -webkit-transition: margin-top 0.2s;
+  -moz-transition: margin-top 0.2s;
+  transition: margin-top 0.2s;
+}
+
+.cbp-ig-grid .cbp-ig-category {
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 1em;
+  letter-spacing: 1px;
+  color: #fff;
+  -webkit-transform: translateY(10px);
+  -moz-transform: -moz-translateY(10px);
+  -ms-transform: -ms-translateY(10px);
+  transform: translateY(10px);
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  -webkit-transition: transform 0.3s, opacity 0.2s;
+}
+
+.cbp-ig-grid li > a:hover{
+    background: #006a20;
+}
+  
+.cbp-ig-grid li >a:hover .cbp-ig-icon {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+}
+  
+/*Irá mudar a cor do título quando mouse estiver em cima do icone ou título*/
+.cbp-ig-grid li > a:hover .cbp-ig-icon:before,
+  .cbp-ig-grid li > a:hover .cbp-ig-title{
+    color: #fff;
+}
+
+/*Irá movimentar o nome para cima*/
+
+  .cbp-ig-grid li > a:hover .cbp-ig-title{
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+/*Irá fazer a barra mudar de cor e descer, quando o título subir*/
+
+.cbp-ig-grid li > a:hover .cbp-ig-title:before{
+    background: #fff;
+    margin-top: 30px;
+}
+
+/*Novo adicional ------------------------------------------------------------------------------------------------*/
+.cbp-ig-title {
+    color: #006a20;
+    align-content: center;
+    font-size: 12px;
+}
+
+ /* estilo da Grid em geral*/
+  
+@media screen and (max-width: 62.75em){
+    .cbp-ig-grid li {
+        width: 25%;
+    }
+}
+  
+@media screen and (max-width: 41.6em) { 
+    .cbp-ig-grid li {
+        width: 100%;
+    }
+}
+  
+@media screen and (max-width: 25em) { 
+    .cbp-ig-grid {
+        font-size: 80%;
+    }
+}
+/*Fim do Links do .cbp-ig-grid*/
+
+/*Fim do links rápidos*/
+
+/*Notícias*/
+.noticias {
+    grid-area: noticias;
+    background: white;
+}
+
+.noticias h2 {
+    display: block;
+    position: relative;
+    margin: auto 80px;
+    color: #006a20;
+}
+/*Fim das Noticias*/
+
+/*Footer*/
+footer{
+    grid-area: footer;
+
+}
+.footer-rodape1{
+    background: #006a20;
+    color: white;
+    padding: 1rem;
+}
+
+.footer-links-redes-campus ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: right;
+}
+.foto-footer-links-redes-campus img{
+    width: auto;
+    height: 55px;
+}
+.footer-rodape2{
+    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+    background-color: #019934;
+    color: #ffffff;
+    font-size: 13px;
+    padding: .5rem;
+}
+
+/*Footer Instituto*/
+.instituto{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+/*Fim Footer Instituto*/
+
+/*Footer-redes sociais*/
+.links-redes-sociais li{
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    padding: 3px;
+}
+.footer-icon-redes-sociais{
+    color: white;
+}
+/*Footer-redes sociais*/
+
+/*.footer-informacoes*/
+.footer-informacoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+/*Fim .footer-informacoes*/

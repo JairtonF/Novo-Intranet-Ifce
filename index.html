@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="trocarPlanoDeFundo.js"></script>
+    <script src="tabs.js" defer></script>
+    <title>Intranet</title>
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <header id="header">
+            <!--Menu superior-->
+            <nav>
+
+                <img class="logo" src="imagens/intranet_horizontal_branco.png" alt="logo">
+
+                <ul class="menu-superior" id="menu-superior">
+                    <li>
+                        <div class="dropdown-btn">
+                            <h4><a href="#">Direção</a></h4>
+                            <div class="dropdown dropdown-direcao" id="dropdown-direcao">
+                                <ul>
+                                    <li>
+                                        <h3><a href="https://ouvidoria.maracanau.ifce.edu.br/" target="_blank">Ouvidoria</a></h3>
+                                        <h3><a href="https://ifce.edu.br/maracanau/menu/o-campus" target="_blank">O Campus</a></h3>
+                                        <h3><a href="https://sei.ifce.edu.br/sip/login.php?sigla_orgao_sistema=IFCE&sigla_sistema=SEI" target="_blank">SEI</a></h3>
+                                        <h3><a href="http://avisos.maracanau.ifce.edu.br/" target="_blank">Avisos</a></h3>
+                                        <h3><a href="https://ifce.edu.br/maracanau/colecoes/eventos" target="_blank">Eventos</a></h3>
+                                        <h3><a href="https://ifce.edu.br/maracanau" target="_blank">Site do Campus</a></h3>
+                                        <h3><a href="https://frequencia.maracanau.ifce.edu.br/login" target="_blank">Frequência</a></h3>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown-btn">
+                            <h4><a href="#">Ensino</a></h4>
+                            <div class="dropdown dropdown-ensino" id="dropdown-ensino">
+                                <ul>
+                                    <li>
+                                        <h3><a href="https://ifce.edu.br/maracanau/menu/calendario-letivo" target="_blank">Calendário</a></h3>
+                                        <h3><a href="https://sisae.ifce.edu.br/" target="_blank">SISAE</a></h3>
+                                        <h3><a href="https://qacademico.ifce.edu.br/" target="_blank">QAcadêmico</a></h3>
+                                        <h3><a href="https://ifce.edu.br/espaco-estudante/regulamento-de-ordem-didatica" target="_blank">ROD</a></h3>
+                                        <h3><a href="http://biblioteca.ifce.edu.br/" target="_blank">Sophia</a></h3>
+                                        <h3><a href="https://ifce.edu.br/maracanau/menu/aviso-estagios" target="_blank">Estágios</a></h3>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown-btn">
+                            <h4><a href="#">Pesquisa e extensão</a></h4>
+                            <div class="dropdown dropdown-pesquisa" id="dropdown-pesquisa">
+                                <ul>
+                                    <li>
+                                        <h3><a href="https://ifce.edu.br/maracanau/menu/deppi" target="_blank">Página do DEPPI</a></h3>
+                                        <h3><a href="http://deppi.maracanau.ifce.edu.br/" target="_blank">Site do DEPPI</a></h3>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown-btn">
+                            <h4><a href="#">Administração</a></h4>
+                            <div class="dropdown dropdown-pesquisa" id="dropdown-pesquisa">
+                                <ul>
+                                    <li>
+                                        <h3><a href="http://infra.maracanau.ifce.edu.br/" target="_blank">Infraestrura</a></h3>
+                                        <h3><a href="https://suap.ifce.edu.br/accounts/login/?next=/" target="_blank">SUAP</a></h3>
+                                        <h3><a href="https://suporte.maracanau.ifce.edu.br/" target="_blank">Suporte</a></h3>
+                                        <h3><a href="https://docsti.maracanau.ifce.edu.br/" target="_blank">Manuais</a></h3>
+                                        <h3><a href=https://informatica.maracanau.ifce.edu.br/" target="_blank">Sobre Nós</a></h3>
+                                    </li>
+                                </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="search-box">
+                            <input class="search-txt" type="text" name="" placeholder="Pesquisar...">
+                            <a class="search-button" href="#">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+            </nav>
+            <!-- fim do Menu superior-->
+
+            <!--Menu inferior-->
+            <div class="menu-inferior" id="menu-inferior">
+                <ul>
+                    <li data-tab-target="#links-gerais">
+                        <h4>
+                            <a href="#">
+                                <div class="icon-float">
+                                    <i class="fas fa-info-circle fa-2x"></i>
+                                </div>
+                                Links Gerais
+                            </a>
+                        </h4>
+                    </li>
+                    <span class="vertical-line-menu-inferior"></span>
+                    <li data-tab-target="#links-servidores">
+                        <h4>
+                            <a href="#">
+                                <div class="icon-float">
+                                    <i class="fas fa-user-tie fa-2x"></i>
+                                </div>
+                                Links para Servidores
+                            </a>
+                        </h4>
+                    </li>
+                    <span class="vertical-line-menu-inferior"></span>
+                    <li data-tab-target="#links-alunos">
+                        <h4>
+                            <a href="#">
+                                <div class="icon-float">
+                                    <i class="fa fa-graduation-cap fa-2x"></i>
+                                </div>
+                                Links para Alunos
+                            </a>
+                        </h4>
+                    </li>
+                </ul>
+            </div>   
+            <!--Fim do menu inferior--> 
+        </header>
+        
+        <div class="links-rapidos">
+            <div class="active" id="links-gerais" data-tab-content>   
+                <ul class="cbp-ig-grid">
+                    <!--Usar listas, responsive icon-grid-->
+                        <li>
+                            <a href="https://ifce.edu.br/maracanau/menu/o-campus" target="_blank">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/campus_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">
+                                    O Campus
+                                </h3>
+    
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="http://ouvidoria.maracanau.ifce.edu.br/" target="_blank">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/ouvidoria_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Ouvidoria</h3>
+                            </a> 
+                        </li>
+                        
+                        <li>
+                            <a href="http://infra.maracanau.ifce.edu.br/" target="_blank">
+                                <span class="cbp-ig-icon cbp-ig-icon-milk"> 
+                                    <img src="imagens/infra_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Suporte e Infraestrura </h3>
+                            </a> 
+                        </li>
+                        
+                        <li>
+                            <a href="http://suporte.maracanau.ifce.edu.br/" target="_blank">
+                                <span class="cbp-ig-icon cbp-ig-icon-whippy">
+                                    <img src="imagens/infor_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Suporte</h3>
+                            </a> 
+                        </li>
+                        
+                        <li>
+                            <a href="https://ifce.edu.br/maracanau/menu/como-chegar" target="_blank">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/jardineira.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Jardineira</h3>
+                            </a> 
+                        </li>
+                        <li>
+                            <a href="https://intranet.maracanau.ifce.edu.br/sysra/restaurante" target="_blank">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/restaurante_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Restaurante</h3>
+                            </a> 
+                        </li>
+    
+                        <li>
+                            <a href="https://ifce.edu.br/maracanau/colecoes/eventos" target="_blank">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/eventos_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Eventos</h3>
+                            </a> 
+                        </li>
+                        
+                        <li> 
+                            <a href="https://ifce.edu.br/maracanau/menu/aviso-estagios" target="_blank">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/estagio_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Estágios</h3>
+                            </a> 
+                        </li>
+
+                        <li> 
+                            <a href="https://sisae.ifce.edu.br/" target="_blank">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Auxílios Estudantis</h3>
+                            </a> 
+                        </li>
+
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Viagens Marcadas</h3>
+                            </a> 
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Avisos</h3>
+                            </a> 
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Perguntas Frequentes</h3>
+                            </a> 
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Ramais</h3>
+                            </a> 
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Calendário</h3>
+                            </a> 
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Política de segurança</h3>
+                            </a> 
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Organograma</h3>
+                            </a> 
+                        </li>
+                </ul>
+            </div>
+            <div id="links-servidores" data-tab-content>
+                <ul class="cbp-ig-grid">
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Central de Atendimentos da TI</h3>
+                            </a> 
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Solicitação Comunicação Social</h3>
+                            </a> 
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/jardineira.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Requisição de Viagens</h3>
+                            </a> 
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Status de Serviço</h3>
+                            </a> 
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Wifi ifce-servidores</h3>
+                            </a> 
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">E-mail institucional</h3>
+                            </a> 
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Quadro de Servidores</h3>
+                            </a> 
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Aniversariantes do Mês</h3>
+                            </a> 
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Férias dos Servidores</h3>
+                            </a> 
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">PDI</h3>
+                            </a> 
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">PDTI</h3>
+                            </a> 
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Contratos</h3>
+                            </a> 
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Portarias Fiscais</h3>
+                            </a> 
+                        </li>
+                        <li> 
+                            <a href="#">
+                                <span class="cbp-ig-icon">
+                                    <img src="imagens/auxilios_verde.png">
+                                </span>
+                                <h3 class="cbp-ig-title">Fluxo de Solicitações</h3>
+                            </a> 
+                        </li>
+                </ul>
+            </div>
+            
+            <div id="links-alunos" data-tab-content>
+                <ul class="cbp-ig-grid">
+                    <li> 
+                        <a href="https://ifce.edu.br/maracanau/menu/aviso-estagios" target="_blank">
+                            <span class="cbp-ig-icon">
+                                <img src="imagens/estagio_verde.png">
+                            </span>
+                            <h3 class="cbp-ig-title">Estágios</h3>
+                        </a> 
+                    </li>
+                    <li> 
+                        <a href="https://sisae.ifce.edu.br/" target="_blank">
+                            <span class="cbp-ig-icon">
+                                <img src="imagens/auxilios_verde.png">
+                            </span>
+                            <h3 class="cbp-ig-title">Auxílios Estudantis</h3>
+                        </a> 
+                    </li>
+                    <li> 
+                        <a href="#">
+                            <span class="cbp-ig-icon">
+                                <img src="imagens/estagio_verde.png">
+                            </span>
+                            <h3 class="cbp-ig-title">Requisições</h3>
+                        </a> 
+                    </li>
+                    <li> 
+                        <a href="#">
+                            <span class="cbp-ig-icon">
+                                <img src="imagens/estagio_verde.png">
+                            </span>
+                            <h3 class="cbp-ig-title">Wifi ifce-alunos</h3>
+                        </a> 
+                    </li>
+                    <li> 
+                        <a href="#">
+                            <span class="cbp-ig-icon">
+                                <img src="imagens/estagio_verde.png">
+                            </span>
+                            <h3 class="cbp-ig-title">E-mail Acadêmico</h3>
+                        </a> 
+                    </li>
+                    <li> 
+                        <a href="#">
+                            <span class="cbp-ig-icon">
+                                <img src="imagens/estagio_verde.png">
+                            </span>
+                            <h3 class="cbp-ig-title">Solicitação de Carteirinha</h3>
+                        </a> 
+                    </li>
+                    <li> 
+                        <a href="#">
+                            <span class="cbp-ig-icon">
+                                <img src="imagens/estagio_verde.png">
+                            </span>
+                            <h3 class="cbp-ig-title">Comunicação com Setores</h3>
+                        </a> 
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="noticias">
+
+            <h2>Notícias</h2>
+            
+            <hr style="height:2px;border-width:0;color:#006a20;background-color:#006a20; width: 90%">
+
+            <div class="ui itens" id="itensNoticias">
+                <div class="item" id="noticia1">
+                    <div class="image">
+
+                    </div>
+                    <div class="conteudo">
+
+                    </div>
+                    <div class="meta">
+
+                    </div>
+                    <div class="extra">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="footer-rodape1">
+                <div class="footer-links-redes-campus">
+
+                    <ul>
+
+                        <li>
+                            <figure class="foto-footer-links-redes-campus img">
+                                <img src="imagens/intranet-logo.jpg" alt="logo">
+                            </figure>
+
+                        </li>
+
+                        <li>
+                            <figure class="foto-footer-links-redes-campus">
+                                <a href="https://sei.ifce.edu.br/sei/modulos/pesquisa/md_pesq_processo_pesquisar.php?acao_externa=protocolo_pesquisar&acao_origem_externa=protocolo_pesquisar&id_orgao_acesso_externo=0" target="_blank">
+                                <img src="imagens/sei-logo.png"></a>
+                            </figure>
+                        </li>
+
+                        <li>
+                            <figure class="foto-footer-links-redes-campus">
+                                <a href="https://suap.ifce.edu.br/" target="_blank">
+                                    <img src="imagens/suap-logo.png"></a>
+                            </figure>
+                        </li>
+
+                        <li>
+                            <figure class="foto-footer-links-redes-campus">
+                                <a href="https://accounts.google.com/" target="_blank">
+                                <img src="imagens/email-logo.png"></a>
+                            </figure>
+                        </li>
+
+                    </ul>
+                </div>
+                <hr style="height:2px;border-width:0;color:#019934;background-color:#019934; width: 90%">
+
+                <div class="instituto">
+                    <p style="text-align: center;"><b>Instituto Federal de Educação, Ciencia e Tecnologia do Ceará</b></p>
+                </div>
+
+                <div class="footer-informacoes" id="footer-informacoes">
+
+                        <p class="endereco"> <b>Endereço</b> <br><br>
+
+                            Avenida Parque Central, S/N Distrito Industrial I,<br>
+                            CEP: 61.939-140 - Maracanaú - Ceará <br>
+                        </p>
+
+                        <p class="contato"><b>Contato</b> <br><br>
+                            Horário de atendimento: 7h às 18h <br>
+                            Maiores informações: (85) 3878-6301 <br>
+                        </p>
+                    
+                    <div class="links-redes-sociais" id="links-redes-sociais">
+
+                        <ul>
+                            <li>
+                                <a href="https://twitter.com/ifcemaracanau" class="footer-icon-redes-sociais" target="_blank"> 
+                                    <i class="fab fa-twitter fa-lg"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UC-4gM_TJa2cFifwF9rAaJvw" class="footer-icon-redes-sociais" target="_blank"> 
+                                    <i class="fab fa-youtube fa-lg"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.facebook.com/ifcemaracanau/" class="footer-icon-redes-sociais" target="_blank"> 
+                                    <i class="fab fa-facebook fa-lg"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/explore/locations/503640290/ifce-campus-maracanau/" class="footer-icon-redes-sociais" target="_blank">
+                                    <i class="fab fa-instagram fa-lg"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="footer-rodape2">
+                <p style="text-align: center;">
+                    Núcleo de Desenvolvimento de Softwares - NDS<br>
+                    Coordenadoria de Tecnologia da Informação - CTI<br>
+
+                    IFCE Campus Maracanaú - 2019
+                    </p>
+                </div>
+        </footer>
+    </div>
+</body>
+
+</html>
