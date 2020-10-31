@@ -352,7 +352,11 @@ nav img{
     font-size: 12px;
 }
 
- /* estilo da Grid em geral*/
+.cbp-ig-grid li > a:hover img{
+    opacity: 1;
+    filter: brightness(0) invert(1);
+}
+ /* responsividade da Grid em geral*/
   
 @media screen and (max-width: 62.75em){
     .cbp-ig-grid li {
@@ -362,7 +366,7 @@ nav img{
   
 @media screen and (max-width: 41.6em) { 
     .cbp-ig-grid li {
-        width: 100%;
+        width: 50%;
     }
 }
   
