@@ -43,12 +43,7 @@ nav ul{
     list-style: none;
     display: inline-block;
 }
-/*nav ul li{
-    display: flex;
-    list-style: none;
-    display: inline-block;
-}
-*/
+
 .menu-superior a {
     text-decoration: none;
     text-transform: uppercase;
@@ -83,9 +78,6 @@ nav ul{
 .dropdown-btn:hover > .dropdown{
     display: flex;
 }
-
-
-/*Fim do meunu de navegação superior*/
 
 /*Barra de pesquisa animada*/
 .search-box{
@@ -132,6 +124,21 @@ nav img{
     width: auto;
     height: 65%;
 }
+/*Ícone menu sanduíche*/
+.burguer {
+    margin-top: 1rem;
+    display: none;
+    cursor: pointer;
+}
+
+.burguer div{
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+/*Fim do ícone menu sanduíche*/
 
 /*Fim do menu de navegação superior*/
 
@@ -207,6 +214,7 @@ nav img{
     padding: 10px;
 }*/
 
+/*Conteúdo das tabs*/
 [data-tab-content]{
     display: none;
 }
@@ -214,8 +222,12 @@ nav img{
 .active[data-tab-content]{
     display: block;
 }
+
+/*Fim do conteúdo das tabs*/
+
 /*Links do .cbp-ig-grid*/
-/*cbp ig grid início -------------------------------------------------------------------------------*/
+
+/*cbp ig grid início */
 .cbp-ig-grid {
     list-style: none;
     padding: 8px 0 20px 0;
@@ -345,7 +357,6 @@ nav img{
     margin-top: 30px;
 }
 
-/*Novo adicional ------------------------------------------------------------------------------------------------*/
 .cbp-ig-title {
     color: #006a20;
     align-content: center;
@@ -356,25 +367,7 @@ nav img{
     opacity: 1;
     filter: brightness(0) invert(1);
 }
- /* responsividade da Grid em geral*/
-  
-@media screen and (max-width: 62.75em){
-    .cbp-ig-grid li {
-        width: 25%;
-    }
-}
-  
-@media screen and (max-width: 41.6em) { 
-    .cbp-ig-grid li {
-        width: 50%;
-    }
-}
-  
-@media screen and (max-width: 25em) { 
-    .cbp-ig-grid {
-        font-size: 80%;
-    }
-}
+ 
 /*Fim do Links do .cbp-ig-grid*/
 
 /*Fim do links rápidos*/
@@ -453,3 +446,136 @@ footer{
     margin: 20px;
 }
 /*Fim .footer-informacoes*/
+
+
+/* responsividade do intranet*/
+  
+@media screen and (max-width: 62.75em){
+    
+    body{
+        overflow-x: hidden;
+    }
+    
+    .menu-superior{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color:  #0000007e;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 150;
+    }
+
+    .menu-superior li{
+        opacity: 0;
+    }
+
+    .burguer{
+        display: block;
+    }
+
+    .search-box:hover > .search-txt{
+        width: 140px;
+        padding: 0 6px;
+    }
+
+    .footer-links-redes-campus ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .cbp-ig-grid li {
+        width: 25%;
+    }
+}
+@media screen and (max-width: 55.6em) {
+
+    .search-box:hover > .search-txt{
+        width: 100px;
+        padding: 0 6px;
+    }
+    
+    .footer-informacoes{
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 41.6em) { 
+    
+    .search-box:hover > .search-txt{
+        width: 70px;
+        padding: 0 6px;
+    }
+
+    .cbp-ig-grid li {
+        width: 50%;
+    }
+    .cbp-ig-grid {
+        font-size: 80%;
+        
+    }
+}
+
+@media screen and (max-width: 36em) { 
+    .search-box:hover > .search-txt{
+        width: 50px;
+        padding: 0 6px;
+    }
+    .cbp-ig-grid {
+        font-size: 80%;
+        
+    }
+}
+
+
+@media screen and (max-width: 31.6em) { 
+    .icon-float{
+        display: none;
+    }
+    .cbp-ig-grid {
+        font-size: 80%;
+        
+    }
+}
+
+@media screen and (max-width: 25em) { 
+    .cbp-ig-grid li {
+        width: 100%;
+    }
+    .cbp-ig-grid {
+        font-size: 80%;
+    }
+}
+/*responsável pale transição do menu sanduíche*/
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/*Animação para transformar o sanduiche em "X"*/
+.toggle .line1{
+    transform: rotate( -45deg ) translate(-5px, 6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate( 45deg ) translate(-5px, -6px);
+}
